@@ -1,0 +1,32 @@
+* Installing Python 3.9, setuptools, pip and Django 3.2 version
+Step 1 : clone git repo either of way you feel compfort:::
+   $ git clone https://github.com/Rameshh/Django or $ git clone git@github.com:Rameshh/Django
+step 2 : cd Django::
+   Install customized python 
+   $ ./installpy.sh -s
+    
+   Error: zipimport.ZipImportError: can't decompress data; zlib not available RHEL/CentOS: yum install wget gcc gcc-c++ zlib zlib.i686 zlib-devel 
+   zlib-devel.i686 libffi-devel xz-devel sqlite-devel python-devel openldap-devel openssl-devel bzip2-devel sqlite sqlite-devel openssl-devel.i686
+   
+   For UBUNTU OS: apt-get install wget gcc libncursesw5-dev libgdbm-dev libc6-dev libsqlite3-dev tk-dev libssl-dev openssl zlib1g-dev libffi-dev
+   libmysqlclient-dev libsasl2-dev python-dev libldap2-dev libbz2-dev
+
+Step 3: Once above command execution success check python installed in the current working directory
+   $ ./usr/bin/python
+Step 4: To check the django-admin version
+   $ ./usr/bin/django-admin --version 
+ 
+* Django project creation steps 
+1. Creating your Django Project
+   ./usr/bin/django-admin.py startproject myapp
+2. The development server
+   ../usr/bin/python3 manage.py runserver
+3. Changing the port and IP address
+   ../usr/bin/python3 manage.py runserver 8080 (Changing the port)
+   ../usr/bin/python3 manage.py runserver 0.0.0.0:8000 (Changing the IP address)
+4. Creating a Django Application
+   ../usr/bin/python3 manage.py startapp rango
+5. Need to modify the settings.py file, contained within your project’s configuration directory. 
+   Open the file and find the INSTALLED_APPS tuple. Add the rango application to the end of the tuple.
+
+     
