@@ -1,0 +1,6 @@
+FROM python:3.9.5
+WORKDIR /app
+COPY . /app
+RUN ./pipinstall_django.sh
+EXPOSE 8000 
+ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
